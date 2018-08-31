@@ -24,3 +24,6 @@ _autosave-*
 # Exported BOM files
 *.xml
 *.csv
+
+# Other stuff:
+rescue-backup/
