@@ -1675,7 +1675,7 @@ Wire Notes Line
 Wire Notes Line
 	20900 12200 20900 8250
 Text Notes 20900 8250 0    50   ~ 0
-GSR Analog Front End
+GSR Analog Front End (Using 4-Op Amp LM324-N Configured as Instrumentation Amp)
 Wire Notes Line
 	20600 8250 20600 12200
 Wire Notes Line

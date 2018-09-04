@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 26)
+    (drawings 28)
     (tracks 540)
     (zones 0)
     (modules 62)
@@ -17,7 +17,7 @@
     (33 F.Adhes user hide)
     (34 B.Paste user)
     (35 F.Paste user hide)
-    (36 B.SilkS user hide)
+    (36 B.SilkS user)
     (37 F.SilkS user)
     (38 B.Mask user hide)
     (39 F.Mask user hide)
@@ -29,7 +29,7 @@
   )
 
   (setup
-    (last_trace_width 0.152)
+    (last_trace_width 0.4572)
     (user_trace_width 0.152)
     (user_trace_width 0.229)
     (trace_clearance 0.1524)
@@ -58,7 +58,7 @@
     (aux_axis_origin 0 0)
     (visible_elements 7FFEFFBF)
     (pcbplotparams
-      (layerselection 0x010f0_80000001)
+      (layerselection 0x010f0_ffffffff)
       (usegerberextensions true)
       (usegerberattributes false)
       (usegerberadvancedattributes false)
@@ -1514,7 +1514,7 @@
       (net 37 DGND))
   )
 
-  (module SM0402 (layer F.Cu) (tedit 597F8D67) (tstamp 54D00806)
+  (module SM0402 (layer F.Cu) (tedit 597F8D67) (tstamp 5B8DF908)
     (at 275.45 140.55 270)
     (path /59805BFF)
     (attr smd)
@@ -2169,7 +2169,7 @@
   (module musaPwrPad:TSSOP-14_6.4x5mm (layer F.Cu) (tedit 5B895976) (tstamp 5B89BDC0)
     (at 293.9034 135.001)
     (path /5B884077)
-    (fp_text reference U2 (at -0.05 -2.075 180) (layer F.SilkS)
+    (fp_text reference U2 (at -0.1034 -0.481 180) (layer F.SilkS)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text value LM324N (at 0 -0.5) (layer Dwgs.User)
@@ -2202,6 +2202,12 @@
       (net 9 DVDD))
   )
 
+  (gr_text GSR_IN (at 295.09 129.4) (layer F.SilkS) (tstamp 5B8DF228)
+    (effects (font (size 0.65 0.65) (thickness 0.08)))
+  )
+  (gr_text GND (at 289.97 127.93 90) (layer F.SilkS) (tstamp 5B8DF222)
+    (effects (font (size 0.75 0.75) (thickness 0.1)))
+  )
   (gr_text BATT+ (at 290.68 144.44 90) (layer F.SilkS)
     (effects (font (size 0.6 0.6) (thickness 0.07)))
   )
@@ -2247,7 +2253,7 @@
     (effects (font (size 0.75 0.75) (thickness 0.1)))
   )
   (gr_line (start 269.9 127.673) (end 269.32 127.673) (angle 90) (layer F.SilkS) (width 0.5))
-  (gr_text "nRF52-ADS1292-MPU\nExG Prototype - 06/08/18\nYeo GaTech BNE Lab" (at 273.975 142.56) (layer B.SilkS)
+  (gr_text "nRF52-GSR Prototype \n09/03/18\nYeo GaTech BNE Lab" (at 273.36 141.38) (layer B.SilkS)
     (effects (font (size 0.762 0.762) (thickness 0.127)) (justify mirror))
   )
 
@@ -2792,7 +2798,7 @@
   (segment (start 287.41 130.42) (end 287.41 129.79) (width 0.152) (layer F.Cu) (net 63) (tstamp 5B881F6D))
   (segment (start 285.23 132.6) (end 287.41 130.42) (width 0.152) (layer F.Cu) (net 63) (tstamp 5B881F6B))
 
-  (zone (net 37) (net_name DGND) (layer F.Cu) (tstamp 5B8C49EC) (hatch edge 0.508)
+  (zone (net 37) (net_name DGND) (layer F.Cu) (tstamp 5B8DF243) (hatch edge 0.508)
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
@@ -3229,7 +3235,7 @@
       )
     )
   )
-  (zone (net 37) (net_name DGND) (layer B.Cu) (tstamp 5B8C49E9) (hatch edge 0.508)
+  (zone (net 37) (net_name DGND) (layer B.Cu) (tstamp 5B8DF240) (hatch edge 0.508)
     (connect_pads (clearance 0.508))
     (min_thickness 0.254)
     (fill yes (arc_segments 16) (thermal_gap 0.508) (thermal_bridge_width 0.508))
