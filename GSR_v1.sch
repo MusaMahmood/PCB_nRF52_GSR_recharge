@@ -1503,8 +1503,6 @@ Wire Wire Line
 Wire Wire Line
 	18900 9950 18900 9900
 Connection ~ 18900 9950
-Text Label 19450 9950 0    60   ~ 0
-ALERT
 Wire Wire Line
 	17950 10850 18100 10850
 Wire Wire Line
@@ -1736,17 +1734,6 @@ Wire Notes Line
 	2750 3050 2750 1150
 Text Notes 2750 1150 0    50   ~ 0
 Pin Headers and General Connection Labeling
-$Comp
-L Connector:Micro_SD_Card J1
-U 1 1 5C383B9E
-P 10700 10350
-F 0 "J1" H 10650 9533 50  0000 C CNN
-F 1 "Micro_SD_Card" H 10650 9624 50  0000 C CNN
-F 2 "" H 11850 10650 50  0001 C CNN
-F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 10700 10350 50  0001 C CNN
-	1    10700 10350
-	-1   0    0    1   
-$EndComp
 Wire Notes Line
 	15400 8250 9150 8250
 Wire Notes Line
@@ -1756,64 +1743,103 @@ Wire Notes Line
 Wire Notes Line
 	15400 12200 15400 8250
 Wire Wire Line
-	11600 10150 11950 10150
+	13450 9500 13800 9500
 Wire Wire Line
-	11950 10150 11950 9300
+	13800 9500 13800 8650
 Wire Wire Line
-	11950 9300 9800 9300
+	13800 8650 13700 8650
 Wire Wire Line
-	9800 9300 9800 9750
+	11650 8650 11650 9100
 Wire Wire Line
-	9800 9750 9900 9750
+	11650 9100 11750 9100
 Wire Wire Line
-	11600 9950 12400 9950
+	13450 9300 14250 9300
 Wire Wire Line
-	11600 10050 12400 10050
-Text Label 12400 9950 0    50   ~ 0
-DAT1
-Text Label 12400 10050 0    50   ~ 0
-DAT0
+	13450 9400 14250 9400
+Text Label 14250 9400 0    50   ~ 0
+DAT0_MISO
 Wire Wire Line
-	11950 9300 12250 9300
-Connection ~ 11950 9300
-Text GLabel 12250 9300 2    60   Input ~ 0
+	13800 8650 14100 8650
+Connection ~ 13800 8650
+Text GLabel 14100 8650 2    60   Input ~ 0
 DGND
 Wire Wire Line
-	11600 10250 12700 10250
-Text Label 12700 10250 0    50   ~ 0
+	13450 9600 14550 9600
+Text Label 14550 9600 0    50   ~ 0
 uSD_CLK
 Wire Wire Line
-	13100 10350 13100 9300
+	14950 9700 14950 8650
 Wire Wire Line
-	11600 10350 13100 10350
-Text GLabel 13100 9300 2    60   Input ~ 0
+	13450 9700 14950 9700
+Text GLabel 14950 8650 2    60   Input ~ 0
 DVDD
 Wire Wire Line
-	11600 10450 12400 10450
-Text Label 12400 10450 0    50   ~ 0
-CMD
+	13450 9800 14250 9800
+Text Label 14250 9800 0    50   ~ 0
+CMD_MOSI
 Wire Wire Line
-	11600 10550 12400 10550
-Text Label 12400 10550 0    50   ~ 0
-DAT3
+	13450 9900 14250 9900
+Text Label 14250 9900 0    50   ~ 0
+DAT3_CS
 Wire Wire Line
-	11600 10650 12400 10650
-Text Label 12400 10650 0    50   ~ 0
-DAT2
-Wire Wire Line
-	25050 4800 25550 4800
-Wire Wire Line
-	25550 4800 25550 5400
+	13450 10000 14250 10000
+Text Label 14250 10000 0    50   ~ 0
+DAT2_UNUSED
 Wire Wire Line
 	23400 5700 23400 6250
 Wire Wire Line
 	23500 5700 23500 6250
 Wire Wire Line
 	23600 5700 23600 6250
-Text Label 23400 6250 1    60   ~ 0
-ALERT
 Text Label 23500 6250 1    60   ~ 0
 SCL
 Text Label 23600 6250 1    60   ~ 0
 SDA
+Text Label 24100 6350 1    50   ~ 0
+DAT0_MISO
+Text Label 24200 6350 1    50   ~ 0
+uSD_CLK
+Text Label 24300 6350 1    50   ~ 0
+CMD_MOSI
+Text Label 24400 6350 1    50   ~ 0
+DAT3_CS
+Text Label 14250 9300 0    50   ~ 0
+DAT1_UNUSED
+NoConn ~ 14250 9300
+NoConn ~ 14250 10000
+Wire Wire Line
+	24100 5700 24100 6350
+Wire Wire Line
+	24200 5700 24200 6350
+Wire Wire Line
+	24300 6350 24300 5700
+Wire Wire Line
+	24400 5700 24400 6350
+Text Notes 9150 8250 0    50   ~ 0
+MicroSD Card
+Text Label 23400 6250 1    60   ~ 0
+ALERT
+$Comp
+L Connector:Micro_SD_Card_Det J1
+U 1 1 5C6FB1A7
+P 12550 9600
+F 0 "J1" H 12500 8783 50  0000 C CNN
+F 1 "Micro_SD_Card_Det" H 12500 8874 50  0000 C CNN
+F 2 "" H 14600 10300 50  0001 C CNN
+F 3 "https://www.hirose.com/product/en/download_file/key_name/DM3/category/Catalog/doc_file_id/49662/?file_category_id=4&item_id=195&is_series=1" H 12550 9700 50  0001 C CNN
+	1    12550 9600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	13450 9100 13700 9100
+Wire Wire Line
+	13450 9200 13700 9200
+Wire Wire Line
+	13700 8650 13700 9100
+Connection ~ 13700 9100
+Wire Wire Line
+	13700 9100 13700 9200
+Connection ~ 13700 8650
+Wire Wire Line
+	13700 8650 11650 8650
 $EndSCHEMATC
