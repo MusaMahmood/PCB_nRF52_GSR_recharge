@@ -398,10 +398,6 @@ F 3 "" H 27100 4200 60  0001 C CNN
 $EndComp
 Text GLabel 22000 4450 3    60   Input ~ 0
 DGND
-Text Label 24500 6150 0    60   ~ 0
-SCL
-Text Label 24700 6000 0    60   ~ 0
-SDA
 $Comp
 L EEG_ADS1299_2-cache:TPS63001 U1
 U 1 1 59C82A48
@@ -814,14 +810,6 @@ Wire Wire Line
 	22400 4200 22400 4450
 Wire Wire Line
 	22400 4450 22000 4450
-Wire Wire Line
-	24300 5700 24300 6150
-Wire Wire Line
-	24300 6150 24500 6150
-Wire Wire Line
-	24400 5700 24400 6000
-Wire Wire Line
-	24400 6000 24700 6000
 Wire Wire Line
 	17050 1700 17050 2350
 Wire Wire Line
@@ -1544,12 +1532,6 @@ Wire Wire Line
 Wire Wire Line
 	18300 11150 18100 11150
 Connection ~ 18100 11150
-Text Label 24250 6300 0    60   ~ 0
-ALERT
-Wire Wire Line
-	24200 5700 24200 6300
-Wire Wire Line
-	24200 6300 24250 6300
 Wire Wire Line
 	29100 4000 29150 4000
 Wire Wire Line
@@ -1754,4 +1736,84 @@ Wire Notes Line
 	2750 3050 2750 1150
 Text Notes 2750 1150 0    50   ~ 0
 Pin Headers and General Connection Labeling
+$Comp
+L Connector:Micro_SD_Card J1
+U 1 1 5C383B9E
+P 10700 10350
+F 0 "J1" H 10650 9533 50  0000 C CNN
+F 1 "Micro_SD_Card" H 10650 9624 50  0000 C CNN
+F 2 "" H 11850 10650 50  0001 C CNN
+F 3 "http://katalog.we-online.de/em/datasheet/693072010801.pdf" H 10700 10350 50  0001 C CNN
+	1    10700 10350
+	-1   0    0    1   
+$EndComp
+Wire Notes Line
+	15400 8250 9150 8250
+Wire Notes Line
+	9150 8250 9150 12200
+Wire Notes Line
+	9150 12200 15400 12200
+Wire Notes Line
+	15400 12200 15400 8250
+Wire Wire Line
+	11600 10150 11950 10150
+Wire Wire Line
+	11950 10150 11950 9300
+Wire Wire Line
+	11950 9300 9800 9300
+Wire Wire Line
+	9800 9300 9800 9750
+Wire Wire Line
+	9800 9750 9900 9750
+Wire Wire Line
+	11600 9950 12400 9950
+Wire Wire Line
+	11600 10050 12400 10050
+Text Label 12400 9950 0    50   ~ 0
+DAT1
+Text Label 12400 10050 0    50   ~ 0
+DAT0
+Wire Wire Line
+	11950 9300 12250 9300
+Connection ~ 11950 9300
+Text GLabel 12250 9300 2    60   Input ~ 0
+DGND
+Wire Wire Line
+	11600 10250 12700 10250
+Text Label 12700 10250 0    50   ~ 0
+uSD_CLK
+Wire Wire Line
+	13100 10350 13100 9300
+Wire Wire Line
+	11600 10350 13100 10350
+Text GLabel 13100 9300 2    60   Input ~ 0
+DVDD
+Wire Wire Line
+	11600 10450 12400 10450
+Text Label 12400 10450 0    50   ~ 0
+CMD
+Wire Wire Line
+	11600 10550 12400 10550
+Text Label 12400 10550 0    50   ~ 0
+DAT3
+Wire Wire Line
+	11600 10650 12400 10650
+Text Label 12400 10650 0    50   ~ 0
+DAT2
+Wire Wire Line
+	25050 4800 25550 4800
+Wire Wire Line
+	25550 4800 25550 5400
+Wire Wire Line
+	23400 5700 23400 6250
+Wire Wire Line
+	23500 5700 23500 6250
+Wire Wire Line
+	23600 5700 23600 6250
+Text Label 23400 6250 1    60   ~ 0
+ALERT
+Text Label 23500 6250 1    60   ~ 0
+SCL
+Text Label 23600 6250 1    60   ~ 0
+SDA
 $EndSCHEMATC
