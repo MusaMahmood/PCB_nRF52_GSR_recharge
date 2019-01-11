@@ -1842,4 +1842,6 @@ Wire Wire Line
 Connection ~ 13700 8650
 Wire Wire Line
 	13700 8650 11650 8650
+Text Label 19450 9950 0    60   ~ 0
+ALERT
 $EndSCHEMATC
