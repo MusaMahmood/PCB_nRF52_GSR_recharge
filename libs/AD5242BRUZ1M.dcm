@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP AD5242BRUZ1M
+D AD5242BRUZ1M, Digital Potentiometer 1000k 256-Position 2-channel Serial-2 Wire, Serial-I2C 16-Pin TSSOP
+K
+F http://www.mouser.com/datasheet/2/609/AD5241_5242-586728.pdf
+$ENDCMP
+#
+#End Doc Library

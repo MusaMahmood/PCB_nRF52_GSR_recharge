@@ -426,8 +426,6 @@ Text Notes 13700 1950 0    60   ~ 0
 Vout
 Text Notes 17700 2800 0    60   ~ 0
 Vin
-Text GLabel 17700 3450 2    60   Input ~ 0
-DGND
 $Comp
 L conn1:GND-RESCUE-emg_circuit_2_ext_amp #PWR03
 U 1 1 59CC9A1F
@@ -1197,8 +1195,6 @@ F 3 "" H 28200 10600 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	26900 11000 28200 11000
-Text Label 28700 10250 0    60   ~ 0
-GSR_AIN
 Wire Wire Line
 	28200 11000 28200 10750
 Wire Wire Line
@@ -1238,17 +1234,6 @@ F 3 "" H 24350 9800 50  0000 C CNN
 $EndComp
 Wire Wire Line
 	24500 9800 24650 9800
-$Comp
-L Device:R R4
-U 1 1 5B89D14E
-P 24350 10200
-F 0 "R4" V 24430 10200 50  0000 C CNN
-F 1 "200k" V 24350 10200 50  0000 C CNN
-F 2 "Resistors_SMD:R_0402" V 24280 10200 50  0001 C CNN
-F 3 "" H 24350 10200 50  0000 C CNN
-	1    24350 10200
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	25150 10650 24800 10650
 Wire Wire Line
@@ -1387,8 +1372,6 @@ Text GLabel 22650 11100 2    60   Input ~ 0
 DGND
 Text Label 22300 10750 0    60   ~ 0
 ELECTRODE_INPUT
-Text Label 22050 4900 2    60   ~ 0
-GSR_AIN
 Wire Wire Line
 	21400 4500 22500 4500
 Wire Wire Line
@@ -1398,13 +1381,9 @@ Wire Wire Line
 Wire Wire Line
 	22550 4500 22650 4500
 Wire Wire Line
-	22050 4600 22050 4900
-Wire Wire Line
 	22550 4500 22550 4550
 Wire Wire Line
 	22550 4550 21600 4550
-Wire Wire Line
-	22050 4600 22650 4600
 $Comp
 L GSR_v1-rescue:TMP116 U4
 U 1 1 5B8CC095
@@ -1463,7 +1442,7 @@ Connection ~ 18350 10350
 Wire Wire Line
 	18350 9400 18350 9450
 Text Label 18700 10350 0    60   ~ 0
-SDA
+TMP_SDA
 Wire Wire Line
 	16750 10350 16700 10350
 Wire Wire Line
@@ -1479,7 +1458,7 @@ Wire Wire Line
 	18600 9900 18600 10100
 Connection ~ 18600 10100
 Text Label 19250 10100 0    60   ~ 0
-SCL
+TMP_SCL
 Wire Wire Line
 	16600 10600 16750 10600
 Wire Wire Line
@@ -1608,8 +1587,6 @@ Wire Wire Line
 	25950 10750 26200 10750
 Wire Wire Line
 	26900 10350 27000 10350
-Wire Wire Line
-	28200 10250 28700 10250
 Wire Wire Line
 	26900 10150 26750 10150
 Wire Wire Line
@@ -1792,9 +1769,9 @@ Wire Wire Line
 Wire Wire Line
 	23600 5700 23600 6250
 Text Label 23500 6250 1    60   ~ 0
-SCL
+TMP_SCL
 Text Label 23600 6250 1    60   ~ 0
-SDA
+TMP_SDA
 Text Label 24100 6350 1    50   ~ 0
 DAT0_MISO
 Text Label 24200 6350 1    50   ~ 0
@@ -1844,4 +1821,371 @@ Wire Wire Line
 	13700 8650 11650 8650
 Text Label 19450 9950 0    60   ~ 0
 ALERT
+$Comp
+L bioreactor:ADS1220 U7
+U 1 1 5C8DBFC4
+P 4300 5200
+F 0 "U7" H 4250 5350 60  0000 L CNN
+F 1 "ADS1220" H 4100 5150 60  0000 L CNN
+F 2 "Package_DFN_QFN:QFN-16-1EP_3x3mm_P0.5mm_EP1.8x1.8mm" H 4300 5200 60  0001 C CNN
+F 3 "" H 4300 5200 60  0001 C CNN
+	1    4300 5200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 4800 3150 4900
+Wire Wire Line
+	3150 4900 3500 4900
+Wire Wire Line
+	3150 4800 3500 4800
+Wire Wire Line
+	3500 5100 3150 5100
+Wire Wire Line
+	3150 5100 3150 4900
+Connection ~ 3150 4900
+Text GLabel 3150 4900 0    60   Input ~ 0
+DGND
+Wire Wire Line
+	4000 4400 4000 3700
+Wire Wire Line
+	4200 4400 4200 3800
+Wire Wire Line
+	4400 4400 4400 3900
+Wire Wire Line
+	4600 4400 4600 4000
+Wire Wire Line
+	4000 3700 5150 3700
+Wire Wire Line
+	4200 3800 5150 3800
+Wire Wire Line
+	4600 4000 5150 4000
+Wire Wire Line
+	4400 3900 5150 3900
+Text Label 5150 3700 2    50   ~ 0
+SPI_~CS
+Text Label 5150 3800 2    50   ~ 0
+SPI_SCLK
+Text Label 5150 3900 2    50   ~ 0
+DIN
+Text Label 5150 4000 2    50   ~ 0
+DOUT
+Wire Wire Line
+	5100 4900 5100 4100
+Wire Wire Line
+	5100 4100 5150 4100
+Text Label 5150 4100 2    50   ~ 0
+~DRDY
+Wire Wire Line
+	5100 5100 5300 5100
+Wire Wire Line
+	5300 5100 5300 4550
+Text GLabel 5300 4250 2    60   Input ~ 0
+DVDD
+Wire Wire Line
+	5450 4550 5300 4550
+Connection ~ 5300 4550
+Wire Wire Line
+	5300 4550 5300 4250
+$Comp
+L Device:C C7
+U 1 1 5CADCDB2
+P 5600 4550
+F 0 "C7" H 5600 4650 40  0000 L CNN
+F 1 "0.1uF" H 5606 4465 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 5638 4400 30  0001 C CNN
+F 3 "~" H 5600 4550 60  0000 C CNN
+	1    5600 4550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5750 4550 5850 4550
+Text GLabel 5850 4550 2    60   Input ~ 0
+DGND
+Wire Wire Line
+	5100 5300 5700 5300
+$Comp
+L Device:C C8
+U 1 1 5CB2AD17
+P 5700 5500
+F 0 "C8" H 5700 5600 40  0000 L CNN
+F 1 "0.1uF" H 5706 5415 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 5738 5350 30  0001 C CNN
+F 3 "~" H 5700 5500 60  0000 C CNN
+	1    5700 5500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5700 5350 5700 5300
+Connection ~ 5700 5300
+Wire Wire Line
+	5700 5650 5700 5700
+$Comp
+L EEG_ADS1299-cache:TPS61222 U8
+U 1 1 5CB7A095
+P 15700 5250
+F 0 "U8" H 15700 5350 60  0000 C CNN
+F 1 "TPS61222" H 15700 5200 60  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-363_SC-70-6" H 15700 5250 60  0001 C CNN
+F 3 "" H 15700 5250 60  0001 C CNN
+	1    15700 5250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	15100 4850 14850 4850
+Wire Wire Line
+	14850 4850 14850 4450
+Wire Wire Line
+	14850 4450 16650 4450
+Wire Wire Line
+	16650 4450 16650 4850
+Wire Wire Line
+	16650 4850 16300 4850
+Wire Wire Line
+	16300 5250 16500 5250
+$Comp
+L conn1:INDUCTOR L2
+U 1 1 5CBCC61D
+P 16800 5250
+F 0 "L2" V 16750 5250 40  0000 C CNN
+F 1 "4.7uH" V 16900 5250 40  0000 C CNN
+F 2 "Inductors_SMD:L_0603" H 16800 5250 60  0001 C CNN
+F 3 "~" H 16800 5250 60  0000 C CNN
+	1    16800 5250
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	16650 4850 17400 4850
+Wire Wire Line
+	17400 4850 17400 5250
+Wire Wire Line
+	17400 5250 17100 5250
+Connection ~ 16650 4850
+Wire Wire Line
+	14600 5250 14600 6000
+Wire Wire Line
+	14600 6000 16450 6000
+Wire Wire Line
+	16450 6000 16450 5650
+Wire Wire Line
+	16450 5650 16300 5650
+Wire Wire Line
+	14600 5250 15100 5250
+Wire Wire Line
+	14150 5650 14350 5650
+Connection ~ 14350 5650
+Wire Wire Line
+	14350 5650 14550 5650
+$Comp
+L conn1:GND-RESCUE-emg_circuit_2_ext_amp #PWR0101
+U 1 1 5CCA302C
+P 14350 5900
+F 0 "#PWR0101" H 14350 5900 30  0001 C CNN
+F 1 "GND" H 14350 5830 30  0001 C CNN
+F 2 "" H 14350 5900 60  0000 C CNN
+F 3 "" H 14350 5900 60  0000 C CNN
+	1    14350 5900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14350 5650 14350 5900
+Wire Wire Line
+	16450 5650 16950 5650
+Connection ~ 16450 5650
+Text GLabel 17400 5650 2    50   Input ~ 0
+AVDD
+Connection ~ 16950 5650
+Wire Wire Line
+	16950 5650 17400 5650
+$Comp
+L Device:C C10
+U 1 1 5CD26BAD
+P 16950 6000
+F 0 "C10" H 16950 6100 40  0000 L CNN
+F 1 "10uF" H 16956 5915 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 16988 5850 30  0001 C CNN
+F 3 "~" H 16950 6000 60  0000 C CNN
+	1    16950 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	16950 5650 16950 5850
+Wire Wire Line
+	16950 6150 16950 6300
+Wire Wire Line
+	14850 4450 14550 4450
+Connection ~ 14850 4450
+Text Label 14400 4450 0    60   ~ 0
+LOAD_IN
+Wire Notes Line
+	13350 4250 18600 4250
+Wire Notes Line
+	18600 4250 18600 6650
+Wire Notes Line
+	18600 6650 13350 6650
+Wire Notes Line
+	13350 6650 13350 4250
+$Comp
+L Device:C C9
+U 1 1 5CDDCB2D
+P 14550 4700
+F 0 "C9" H 14550 4800 40  0000 L CNN
+F 1 "10uF" H 14556 4615 40  0000 L CNN
+F 2 "Capacitors_SMD:C_0402" H 14588 4550 30  0001 C CNN
+F 3 "~" H 14550 4700 60  0000 C CNN
+	1    14550 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	14550 4550 14550 4450
+Connection ~ 14550 4450
+Wire Wire Line
+	14550 4450 14400 4450
+Wire Wire Line
+	14550 4850 14550 5650
+Connection ~ 14550 5650
+Wire Wire Line
+	14550 5650 15100 5650
+Text Notes 13350 4200 0    50   ~ 0
+5.0 V Regulator
+Wire Wire Line
+	6150 5300 6150 4950
+Wire Wire Line
+	5700 5300 6150 5300
+Text GLabel 6150 4950 2    50   Input ~ 0
+AVDD
+NoConn ~ 4200 6000
+NoConn ~ 4400 6000
+NoConn ~ 4000 6000
+NoConn ~ 3500 5500
+Wire Wire Line
+	3500 5300 3150 5300
+Wire Wire Line
+	3150 5300 3150 5100
+Connection ~ 3150 5100
+Wire Wire Line
+	5100 5500 5450 5500
+Wire Wire Line
+	5450 5500 5450 5900
+Wire Wire Line
+	5450 5900 6450 5900
+Wire Wire Line
+	4600 6000 6300 6000
+Text Label 6450 5900 0    50   ~ 0
+ADC_AIN0
+Text Label 6450 6000 0    50   ~ 0
+ADC_AIN1
+Wire Wire Line
+	28200 10250 28700 10250
+Text Label 28700 10250 0    50   ~ 0
+ADC_AIN0
+Wire Wire Line
+	6300 6000 6300 6150
+Connection ~ 6300 6000
+Wire Wire Line
+	6300 6000 6450 6000
+Text GLabel 6300 6150 2    60   Input ~ 0
+DGND
+Text Notes 6850 6000 0    50   ~ 0
+reference
+Wire Notes Line
+	2700 3200 2700 6800
+Wire Notes Line
+	2700 6800 7350 6800
+Wire Notes Line
+	7350 6800 7350 3200
+Wire Notes Line
+	7350 3200 2700 3200
+Text Notes 2700 3200 0    50   ~ 0
+ADC
+$Comp
+L AD5242BRUZ1M:AD5242BRUZ1M IC1
+U 1 1 5D0D375D
+P 23500 13500
+F 0 "IC1" H 24100 13765 50  0000 C CNN
+F 1 "AD5242BRUZ1M" H 24100 13674 50  0000 C CNN
+F 2 "SOP65P640X120-16N" H 24550 13600 50  0001 L CNN
+F 3 "http://www.mouser.com/datasheet/2/609/AD5241_5242-586728.pdf" H 24550 13500 50  0001 L CNN
+F 4 "AD5242BRUZ1M, Digital Potentiometer 1000k 256-Position 2-channel Serial-2 Wire, Serial-I2C 16-Pin TSSOP" H 24550 13400 50  0001 L CNN "Description"
+F 5 "1.2" H 24550 13300 50  0001 L CNN "Height"
+F 6 "584-AD5242BRUZ1M" H 24550 13200 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=584-AD5242BRUZ1M" H 24550 13100 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Analog Devices" H 24550 13000 50  0001 L CNN "Manufacturer_Name"
+F 9 "AD5242BRUZ1M" H 24550 12900 50  0001 L CNN "Manufacturer_Part_Number"
+	1    23500 13500
+	1    0    0    -1  
+$EndComp
+Text Label 24200 10200 2    50   ~ 0
+RT_1
+Text Label 24500 10200 0    50   ~ 0
+RT_2
+Text Label 22650 14000 0    50   ~ 0
+AD5242_~SHDN
+Wire Wire Line
+	22650 14000 23500 14000
+Wire Wire Line
+	23500 13900 22500 13900
+Text GLabel 22500 13450 0    60   Input ~ 0
+DVDD
+Wire Wire Line
+	23500 13600 23050 13600
+Wire Wire Line
+	23500 13700 22950 13700
+Wire Wire Line
+	22950 13700 22950 13300
+Wire Wire Line
+	23500 13800 22100 13800
+Wire Wire Line
+	22100 13800 22100 14300
+Text GLabel 22100 14300 0    60   Input ~ 0
+DGND
+Wire Wire Line
+	22950 13300 22750 13300
+Wire Wire Line
+	22750 13300 22750 13250
+Text Label 22750 13250 0    50   ~ 0
+RT_2
+Wire Wire Line
+	22750 13150 22750 13100
+Wire Wire Line
+	23050 13150 23050 13600
+Wire Wire Line
+	22750 13150 23050 13150
+Text Label 22750 13100 0    50   ~ 0
+RT_1
+NoConn ~ 24700 13500
+NoConn ~ 24700 13600
+NoConn ~ 24700 13700
+NoConn ~ 24700 13800
+Wire Wire Line
+	24700 13900 25350 13900
+Wire Wire Line
+	25350 13900 25350 14000
+Text GLabel 25350 14150 2    60   Input ~ 0
+DGND
+Wire Wire Line
+	24700 14000 25350 14000
+Connection ~ 25350 14000
+Wire Wire Line
+	25350 14000 25350 14150
+Wire Wire Line
+	22500 13450 22500 13900
+Wire Wire Line
+	23500 14100 22700 14100
+Wire Wire Line
+	23500 14200 22700 14200
+Text Label 22700 14100 0    50   ~ 0
+AD5242_SCL
+Text Label 22700 14200 0    50   ~ 0
+AD5242_SDA
+NoConn ~ 24700 14100
+NoConn ~ 24700 14200
+NoConn ~ 23500 13500
+Text GLabel 17700 3450 2    60   Input ~ 0
+DGND
+Text GLabel 14150 5650 1    60   Input ~ 0
+DGND
+Text GLabel 16950 6300 2    60   Input ~ 0
+DGND
+Text GLabel 5700 5700 2    60   Input ~ 0
+DGND
 $EndSCHEMATC
