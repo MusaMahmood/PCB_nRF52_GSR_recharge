@@ -424,8 +424,6 @@ F 3 "~" H 14750 2650 60  0000 C CNN
 $EndComp
 Text Notes 13700 1950 0    60   ~ 0
 Vout
-Text Notes 17700 2800 0    60   ~ 0
-Vin
 $Comp
 L conn1:GND-RESCUE-emg_circuit_2_ext_amp #PWR03
 U 1 1 59CC9A1F
@@ -620,9 +618,7 @@ F 3 "" H 11550 5600 50  0000 C CNN
 	1    11550 5600
 	1    0    0    -1  
 $EndComp
-Text Label 6450 1950 2    60   ~ 0
-LOAD_IN
-Text Label 18150 2950 0    60   ~ 0
+Text Label 11100 5550 0    60   ~ 0
 LOAD_IN
 Text GLabel 10800 6050 0    60   Input ~ 0
 DGND
@@ -1030,17 +1026,6 @@ Wire Wire Line
 Wire Wire Line
 	10250 5550 10800 5550
 Connection ~ 10800 5550
-$Comp
-L power:VCC #PWR05
-U 1 1 5B33E296
-P 11100 5550
-F 0 "#PWR05" H 11100 5650 30  0001 C CNN
-F 1 "VCC" H 11100 5650 30  0000 C CNN
-F 2 "" H 11100 5550 60  0000 C CNN
-F 3 "" H 11100 5550 60  0000 C CNN
-	1    11100 5550
-	1    0    0    -1  
-$EndComp
 Text Notes 11200 5350 0    60   ~ 0
 TO LOAD
 Wire Wire Line
@@ -1762,23 +1747,17 @@ Wire Wire Line
 	13450 10000 14250 10000
 Text Label 14250 10000 0    50   ~ 0
 DAT2_UNUSED
-Wire Wire Line
-	23400 5700 23400 6250
-Wire Wire Line
-	23500 5700 23500 6250
-Wire Wire Line
-	23600 5700 23600 6250
-Text Label 23500 6250 1    60   ~ 0
+Text Label 24200 6350 1    60   ~ 0
 TMP_SCL
-Text Label 23600 6250 1    60   ~ 0
+Text Label 24300 6350 1    60   ~ 0
 TMP_SDA
-Text Label 24100 6350 1    50   ~ 0
-DAT0_MISO
-Text Label 24200 6350 1    50   ~ 0
-uSD_CLK
-Text Label 24300 6350 1    50   ~ 0
-CMD_MOSI
 Text Label 24400 6350 1    50   ~ 0
+DAT0_MISO
+Text Label 25550 5400 1    50   ~ 0
+uSD_CLK
+Text Label 25650 5400 1    50   ~ 0
+CMD_MOSI
+Text Label 25750 5400 1    50   ~ 0
 DAT3_CS
 Text Label 14250 9300 0    50   ~ 0
 DAT1_UNUSED
@@ -1794,8 +1773,8 @@ Wire Wire Line
 	24400 5700 24400 6350
 Text Notes 9150 8250 0    50   ~ 0
 MicroSD Card
-Text Label 23400 6250 1    60   ~ 0
-ALERT
+Text Label 20450 5050 0    60   ~ 0
+TMP_ALERT
 $Comp
 L Connector:Micro_SD_Card_Det J1
 U 1 1 5C6FB1A7
@@ -1820,7 +1799,7 @@ Connection ~ 13700 8650
 Wire Wire Line
 	13700 8650 11650 8650
 Text Label 19450 9950 0    60   ~ 0
-ALERT
+TMP_ALERT
 $Comp
 L bioreactor:ADS1220 U7
 U 1 1 5C8DBFC4
@@ -2014,8 +1993,6 @@ Wire Wire Line
 Wire Wire Line
 	14850 4450 14550 4450
 Connection ~ 14850 4450
-Text Label 14400 4450 0    60   ~ 0
-LOAD_IN
 Wire Notes Line
 	13350 4250 18600 4250
 Wire Notes Line
@@ -2100,86 +2077,86 @@ ADC
 $Comp
 L AD5242BRUZ1M:AD5242BRUZ1M IC1
 U 1 1 5D0D375D
-P 23500 13500
-F 0 "IC1" H 24100 13765 50  0000 C CNN
-F 1 "AD5242BRUZ1M" H 24100 13674 50  0000 C CNN
-F 2 "SOP65P640X120-16N" H 24550 13600 50  0001 L CNN
-F 3 "http://www.mouser.com/datasheet/2/609/AD5241_5242-586728.pdf" H 24550 13500 50  0001 L CNN
-F 4 "AD5242BRUZ1M, Digital Potentiometer 1000k 256-Position 2-channel Serial-2 Wire, Serial-I2C 16-Pin TSSOP" H 24550 13400 50  0001 L CNN "Description"
-F 5 "1.2" H 24550 13300 50  0001 L CNN "Height"
-F 6 "584-AD5242BRUZ1M" H 24550 13200 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=584-AD5242BRUZ1M" H 24550 13100 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Analog Devices" H 24550 13000 50  0001 L CNN "Manufacturer_Name"
-F 9 "AD5242BRUZ1M" H 24550 12900 50  0001 L CNN "Manufacturer_Part_Number"
-	1    23500 13500
+P 25650 14100
+F 0 "IC1" H 26250 14365 50  0000 C CNN
+F 1 "AD5242BRUZ1M" H 26250 14274 50  0000 C CNN
+F 2 "SOP65P640X120-16N" H 26700 14200 50  0001 L CNN
+F 3 "http://www.mouser.com/datasheet/2/609/AD5241_5242-586728.pdf" H 26700 14100 50  0001 L CNN
+F 4 "AD5242BRUZ1M, Digital Potentiometer 1000k 256-Position 2-channel Serial-2 Wire, Serial-I2C 16-Pin TSSOP" H 26700 14000 50  0001 L CNN "Description"
+F 5 "1.2" H 26700 13900 50  0001 L CNN "Height"
+F 6 "584-AD5242BRUZ1M" H 26700 13800 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=584-AD5242BRUZ1M" H 26700 13700 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Analog Devices" H 26700 13600 50  0001 L CNN "Manufacturer_Name"
+F 9 "AD5242BRUZ1M" H 26700 13500 50  0001 L CNN "Manufacturer_Part_Number"
+	1    25650 14100
 	1    0    0    -1  
 $EndComp
 Text Label 24200 10200 2    50   ~ 0
 RT_1
 Text Label 24500 10200 0    50   ~ 0
 RT_2
-Text Label 22650 14000 0    50   ~ 0
+Text Label 24800 14600 0    50   ~ 0
 AD5242_~SHDN
 Wire Wire Line
-	22650 14000 23500 14000
+	24800 14600 25650 14600
 Wire Wire Line
-	23500 13900 22500 13900
-Text GLabel 22500 13450 0    60   Input ~ 0
+	25650 14500 24650 14500
+Text GLabel 24650 14050 0    60   Input ~ 0
 DVDD
 Wire Wire Line
-	23500 13600 23050 13600
+	25650 14200 25200 14200
 Wire Wire Line
-	23500 13700 22950 13700
+	25650 14300 25100 14300
 Wire Wire Line
-	22950 13700 22950 13300
+	25100 14300 25100 13900
 Wire Wire Line
-	23500 13800 22100 13800
+	25650 14400 24250 14400
 Wire Wire Line
-	22100 13800 22100 14300
-Text GLabel 22100 14300 0    60   Input ~ 0
+	24250 14400 24250 14900
+Text GLabel 24250 14900 0    60   Input ~ 0
 DGND
 Wire Wire Line
-	22950 13300 22750 13300
+	25100 13900 24900 13900
 Wire Wire Line
-	22750 13300 22750 13250
-Text Label 22750 13250 0    50   ~ 0
+	24900 13900 24900 13850
+Text Label 24900 13850 0    50   ~ 0
 RT_2
 Wire Wire Line
-	22750 13150 22750 13100
+	24900 13750 24900 13700
 Wire Wire Line
-	23050 13150 23050 13600
+	25200 13750 25200 14200
 Wire Wire Line
-	22750 13150 23050 13150
-Text Label 22750 13100 0    50   ~ 0
+	24900 13750 25200 13750
+Text Label 24900 13700 0    50   ~ 0
 RT_1
-NoConn ~ 24700 13500
-NoConn ~ 24700 13600
-NoConn ~ 24700 13700
-NoConn ~ 24700 13800
+NoConn ~ 26850 14100
+NoConn ~ 26850 14200
+NoConn ~ 26850 14300
+NoConn ~ 26850 14400
 Wire Wire Line
-	24700 13900 25350 13900
+	26850 14500 27500 14500
 Wire Wire Line
-	25350 13900 25350 14000
-Text GLabel 25350 14150 2    60   Input ~ 0
+	27500 14500 27500 14600
+Text GLabel 27500 14750 2    60   Input ~ 0
 DGND
 Wire Wire Line
-	24700 14000 25350 14000
-Connection ~ 25350 14000
+	26850 14600 27500 14600
+Connection ~ 27500 14600
 Wire Wire Line
-	25350 14000 25350 14150
+	27500 14600 27500 14750
 Wire Wire Line
-	22500 13450 22500 13900
+	24650 14050 24650 14500
 Wire Wire Line
-	23500 14100 22700 14100
+	25650 14700 24850 14700
 Wire Wire Line
-	23500 14200 22700 14200
-Text Label 22700 14100 0    50   ~ 0
+	25650 14800 24850 14800
+Text Label 24850 14700 0    50   ~ 0
 AD5242_SCL
-Text Label 22700 14200 0    50   ~ 0
+Text Label 24850 14800 0    50   ~ 0
 AD5242_SDA
-NoConn ~ 24700 14100
-NoConn ~ 24700 14200
-NoConn ~ 23500 13500
+NoConn ~ 26850 14700
+NoConn ~ 26850 14800
+NoConn ~ 25650 14100
 Text GLabel 17700 3450 2    60   Input ~ 0
 DGND
 Text GLabel 14150 5650 1    60   Input ~ 0
@@ -2188,4 +2165,113 @@ Text GLabel 16950 6300 2    60   Input ~ 0
 DGND
 Text GLabel 5700 5700 2    60   Input ~ 0
 DGND
+Wire Notes Line
+	28450 12900 28450 15850
+Wire Notes Line
+	28450 15850 23150 15850
+Wire Notes Line
+	23150 15850 23150 12900
+Wire Notes Line
+	23150 12900 28450 12900
+Text Notes 23150 12850 0    50   ~ 0
+Digital Potentiometer
+$Comp
+L SSAJ120100:SSAJ120100 S1
+U 1 1 5C97C155
+P 2900 8350
+F 0 "S1" H 3300 8615 50  0000 C CNN
+F 1 "SSAJ120100" H 3300 8524 50  0000 C CNN
+F 2 "SSAJ120100" H 3550 8450 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/SSAJ120100.pdf" H 3550 8350 50  0001 L CNN
+F 4 "Slide Switches 1-pole 2-positions Surface Mount Slide Switch SPDT Maintained 10 mA Slide" H 3550 8250 50  0001 L CNN "Description"
+F 5 "" H 3550 8150 50  0001 L CNN "Height"
+F 6 "688-SSAJ120100" H 3550 8050 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=688-SSAJ120100" H 3550 7950 50  0001 L CNN "Mouser Price/Stock"
+F 8 "ALPS" H 3550 7850 50  0001 L CNN "Manufacturer_Name"
+F 9 "SSAJ120100" H 3550 7750 50  0001 L CNN "Manufacturer_Part_Number"
+	1    2900 8350
+	1    0    0    -1  
+$EndComp
+Text Notes 3100 7950 0    50   ~ 0
+Switch
+Wire Wire Line
+	2050 8350 2900 8350
+Text Label 2050 8350 0    50   ~ 0
+LOAD_IN
+NoConn ~ 2900 8450
+Wire Wire Line
+	2900 8550 2050 8550
+Text Label 2050 8550 0    50   ~ 0
+LOAD_OUT
+Text Label 14400 4450 0    50   ~ 0
+LOAD_OUT
+Text Label 18150 2950 2    50   ~ 0
+LOAD_OUT
+Text Label 6450 1950 2    50   ~ 0
+LOAD_OUT
+Wire Wire Line
+	3700 8350 4050 8350
+Wire Wire Line
+	4050 8350 4050 8450
+Wire Wire Line
+	3700 8450 4050 8450
+Connection ~ 4050 8450
+Wire Wire Line
+	4050 8450 4050 8550
+Text GLabel 4050 8550 2    60   Input ~ 0
+DGND
+Wire Wire Line
+	22650 4600 22100 4600
+Wire Wire Line
+	22100 4600 22100 5050
+Wire Wire Line
+	22100 5050 21050 5050
+Wire Wire Line
+	22650 4700 22150 4700
+Wire Wire Line
+	22150 4700 22150 5150
+Wire Wire Line
+	22150 5150 21050 5150
+Wire Wire Line
+	22650 4800 22200 4800
+Wire Wire Line
+	22200 4800 22200 5250
+Wire Wire Line
+	22200 5250 21050 5250
+Wire Wire Line
+	25050 4800 25550 4800
+Wire Wire Line
+	25550 4800 25550 5400
+Wire Wire Line
+	25050 4700 25650 4700
+Wire Wire Line
+	25650 4700 25650 5400
+Wire Wire Line
+	25750 4600 25750 5400
+Wire Wire Line
+	25050 4600 25750 4600
+Wire Wire Line
+	23400 5700 23400 6350
+Wire Wire Line
+	23500 5700 23500 6350
+Wire Wire Line
+	23600 5700 23600 6350
+Wire Wire Line
+	23700 5700 23700 6350
+Wire Wire Line
+	23800 5700 23800 6350
+Wire Wire Line
+	23900 5700 23900 6350
+Wire Wire Line
+	24000 5700 24000 6350
+Text Label 23400 6350 1    50   ~ 0
+SPI_~CS
+Text Label 23500 6350 1    50   ~ 0
+SPI_SCLK
+Text Label 23600 6350 1    50   ~ 0
+DIN
+Text Label 23700 6350 1    50   ~ 0
+DOUT
+Text Label 23800 6350 1    50   ~ 0
+~DRDY
 $EndSCHEMATC

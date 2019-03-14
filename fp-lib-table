@@ -1,3 +1,4 @@
 (fp_lib_table
   (lib (name AD5242BRUZ1M)(type Legacy)(uri ${KIPRJMOD}/libs/AD5242BRUZ1M.mod)(options "")(descr ""))
+  (lib (name SSAJ120100)(type Legacy)(uri ${KIPRJMOD}/libs/SSAJ120100.mod)(options "")(descr ""))
 )
