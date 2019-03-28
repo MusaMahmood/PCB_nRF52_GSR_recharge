@@ -2178,30 +2178,30 @@ Digital Potentiometer
 $Comp
 L SSAJ120100:SSAJ120100 S1
 U 1 1 5C97C155
-P 2900 8350
-F 0 "S1" H 3300 8615 50  0000 C CNN
-F 1 "SSAJ120100" H 3300 8524 50  0000 C CNN
-F 2 "SSAJ120100" H 3550 8450 50  0001 L CNN
-F 3 "https://componentsearchengine.com/Datasheets/1/SSAJ120100.pdf" H 3550 8350 50  0001 L CNN
-F 4 "Slide Switches 1-pole 2-positions Surface Mount Slide Switch SPDT Maintained 10 mA Slide" H 3550 8250 50  0001 L CNN "Description"
-F 5 "" H 3550 8150 50  0001 L CNN "Height"
-F 6 "688-SSAJ120100" H 3550 8050 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=688-SSAJ120100" H 3550 7950 50  0001 L CNN "Mouser Price/Stock"
-F 8 "ALPS" H 3550 7850 50  0001 L CNN "Manufacturer_Name"
-F 9 "SSAJ120100" H 3550 7750 50  0001 L CNN "Manufacturer_Part_Number"
-	1    2900 8350
+P 4650 7800
+F 0 "S1" H 5050 8065 50  0000 C CNN
+F 1 "SSAJ120100" H 5050 7974 50  0000 C CNN
+F 2 "SSAJ120100" H 5300 7900 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/SSAJ120100.pdf" H 5300 7800 50  0001 L CNN
+F 4 "Slide Switches 1-pole 2-positions Surface Mount Slide Switch SPDT Maintained 10 mA Slide" H 5300 7700 50  0001 L CNN "Description"
+F 5 "" H 5300 7600 50  0001 L CNN "Height"
+F 6 "688-SSAJ120100" H 5300 7500 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=688-SSAJ120100" H 5300 7400 50  0001 L CNN "Mouser Price/Stock"
+F 8 "ALPS" H 5300 7300 50  0001 L CNN "Manufacturer_Name"
+F 9 "SSAJ120100" H 5300 7200 50  0001 L CNN "Manufacturer_Part_Number"
+	1    4650 7800
 	1    0    0    -1  
 $EndComp
-Text Notes 3100 7950 0    50   ~ 0
+Text Notes 4850 7400 0    50   ~ 0
 Switch
 Wire Wire Line
-	2050 8350 2900 8350
-Text Label 2050 8350 0    50   ~ 0
+	3800 7800 4650 7800
+Text Label 3800 7800 0    50   ~ 0
 LOAD_IN
-NoConn ~ 2900 8450
+NoConn ~ 4650 7900
 Wire Wire Line
-	2900 8550 2050 8550
-Text Label 2050 8550 0    50   ~ 0
+	4650 8000 3800 8000
+Text Label 3800 8000 0    50   ~ 0
 LOAD_OUT
 Text Label 14400 4450 0    50   ~ 0
 LOAD_OUT
@@ -2210,15 +2210,15 @@ LOAD_OUT
 Text Label 6450 1950 2    50   ~ 0
 LOAD_OUT
 Wire Wire Line
-	3700 8350 4050 8350
+	5450 7800 5800 7800
 Wire Wire Line
-	4050 8350 4050 8450
+	5800 7800 5800 7900
 Wire Wire Line
-	3700 8450 4050 8450
-Connection ~ 4050 8450
+	5450 7900 5800 7900
+Connection ~ 5800 7900
 Wire Wire Line
-	4050 8450 4050 8550
-Text GLabel 4050 8550 2    60   Input ~ 0
+	5800 7900 5800 8000
+Text GLabel 5800 8000 2    60   Input ~ 0
 DGND
 Wire Wire Line
 	22650 4600 22100 4600
@@ -2274,4 +2274,18 @@ Text Label 23700 6350 1    50   ~ 0
 DOUT
 Text Label 23800 6350 1    50   ~ 0
 ~DRDY
+Wire Notes Line
+	2700 7000 7400 7000
+Wire Notes Line
+	7400 7000 7400 8400
+Wire Notes Line
+	7400 8400 2700 8400
+Wire Notes Line
+	2700 8400 2700 7000
+Text Label 23950 7150 1    50   ~ 0
+AD5242_~SHDN
+Text Label 24100 6350 1    50   ~ 0
+AD5242_SCL
+Text Label 24000 6350 1    50   ~ 0
+AD5242_SDA
 $EndSCHEMATC
