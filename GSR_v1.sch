@@ -2063,23 +2063,6 @@ Wire Notes Line
 	7350 3200 2700 3200
 Text Notes 2700 3200 0    50   ~ 0
 ADC
-$Comp
-L AD5242BRUZ1M:AD5242BRUZ1M IC1
-U 1 1 5D0D375D
-P 25650 14100
-F 0 "IC1" H 26250 14365 50  0000 C CNN
-F 1 "AD5242BRUZ1M" H 26250 14274 50  0000 C CNN
-F 2 "SOP65P640X120-16N" H 26700 14200 50  0001 L CNN
-F 3 "http://www.mouser.com/datasheet/2/609/AD5241_5242-586728.pdf" H 26700 14100 50  0001 L CNN
-F 4 "AD5242BRUZ1M, Digital Potentiometer 1000k 256-Position 2-channel Serial-2 Wire, Serial-I2C 16-Pin TSSOP" H 26700 14000 50  0001 L CNN "Description"
-F 5 "1.2" H 26700 13900 50  0001 L CNN "Height"
-F 6 "584-AD5242BRUZ1M" H 26700 13800 50  0001 L CNN "Mouser Part Number"
-F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=584-AD5242BRUZ1M" H 26700 13700 50  0001 L CNN "Mouser Price/Stock"
-F 8 "Analog Devices" H 26700 13600 50  0001 L CNN "Manufacturer_Name"
-F 9 "AD5242BRUZ1M" H 26700 13500 50  0001 L CNN "Manufacturer_Part_Number"
-	1    25650 14100
-	1    0    0    -1  
-$EndComp
 Text Label 24200 10200 2    50   ~ 0
 RT_1
 Text Label 24500 10200 0    50   ~ 0
@@ -2130,7 +2113,7 @@ Wire Wire Line
 	26850 14600 27500 14600
 Connection ~ 27500 14600
 Wire Wire Line
-	27500 14600 27500 14750
+	27500 14600 27500 14700
 Wire Wire Line
 	24650 14050 24650 14500
 Wire Wire Line
@@ -2141,8 +2124,6 @@ Text Label 24850 14700 0    50   ~ 0
 AD5242_SCL
 Text Label 24850 14800 0    50   ~ 0
 AD5242_SDA
-NoConn ~ 26850 14700
-NoConn ~ 26850 14800
 NoConn ~ 25650 14100
 Text GLabel 17700 3450 2    60   Input ~ 0
 DGND
@@ -2269,8 +2250,6 @@ Wire Notes Line
 	7400 8400 2700 8400
 Wire Notes Line
 	2700 8400 2700 7000
-Text Label 23950 7150 1    50   ~ 0
-AD5242_~SHDN
 Text Label 24100 6350 1    50   ~ 0
 AD5242_SCL
 Text Label 24000 6350 1    50   ~ 0
@@ -2293,4 +2272,66 @@ F 3 "" H 23500 10200 50  0000 C CNN
 	1    23500 10200
 	-1   0    0    1   
 $EndComp
+$Comp
+L AD5242BRUZ1M:AD5242BRUZ1M IC1
+U 1 1 5D0D375D
+P 25650 14100
+F 0 "IC1" H 26250 14365 50  0000 C CNN
+F 1 "AD5242BRUZ1M" H 26250 14274 50  0000 C CNN
+F 2 "SOP65P640X120-16N" H 26700 14200 50  0001 L CNN
+F 3 "http://www.mouser.com/datasheet/2/609/AD5241_5242-586728.pdf" H 26700 14100 50  0001 L CNN
+F 4 "AD5242BRUZ1M, Digital Potentiometer 1000k 256-Position 2-channel Serial-2 Wire, Serial-I2C 16-Pin TSSOP" H 26700 14000 50  0001 L CNN "Description"
+F 5 "1.2" H 26700 13900 50  0001 L CNN "Height"
+F 6 "584-AD5242BRUZ1M" H 26700 13800 50  0001 L CNN "Mouser Part Number"
+F 7 "https://www.mouser.com/Search/Refine.aspx?Keyword=584-AD5242BRUZ1M" H 26700 13700 50  0001 L CNN "Mouser Price/Stock"
+F 8 "Analog Devices" H 26700 13600 50  0001 L CNN "Manufacturer_Name"
+F 9 "AD5242BRUZ1M" H 26700 13500 50  0001 L CNN "Manufacturer_Part_Number"
+	1    25650 14100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	26850 14700 27500 14700
+Connection ~ 27500 14700
+Wire Wire Line
+	26850 14800 27500 14800
+Text GLabel 25250 6200 1    60   Input ~ 0
+DVDD
+$Comp
+L Device:R R4
+U 1 1 5CA6A10C
+P 25250 6550
+F 0 "R4" V 25330 6550 50  0000 C CNN
+F 1 "4.7k" V 25250 6550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 25180 6550 50  0001 C CNN
+F 3 "" H 25250 6550 50  0000 C CNN
+	1    25250 6550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	25250 6400 25250 6200
+Wire Wire Line
+	27500 14700 27500 14800
+Wire Wire Line
+	25250 6700 25250 6800
+Text GLabel 25600 6200 1    60   Input ~ 0
+DVDD
+Wire Wire Line
+	25600 6200 25600 6400
+Text Label 25250 6800 2    50   ~ 0
+AD5242_SDA
+Text Label 25600 6800 0    50   ~ 0
+AD5242_SCL
+$Comp
+L Device:R R19
+U 1 1 5CB55082
+P 25600 6550
+F 0 "R19" V 25680 6550 50  0000 C CNN
+F 1 "4.7k" V 25600 6550 50  0000 C CNN
+F 2 "Resistors_SMD:R_0402" V 25530 6550 50  0001 C CNN
+F 3 "" H 25600 6550 50  0000 C CNN
+	1    25600 6550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	25600 6800 25600 6700
 $EndSCHEMATC
