@@ -10,4 +10,7 @@
   (lib (name texas_ads1299)(type Legacy)(uri ${KIPRJMOD}/libs_tmp/texas_ads1299.lib)(options "")(descr ""))
   (lib (name texas_TPS6122x)(type Legacy)(uri ${KIPRJMOD}/libs_tmp/texas_TPS6122x.lib)(options "")(descr ""))
   (lib (name texas_TPS61222)(type Legacy)(uri ${KIPRJMOD}/libs_tmp/texas_TPS61222.lib)(options "")(descr ""))
+  (lib (name bioreactor)(type Legacy)(uri ${KIPRJMOD}/libs/bioreactor.lib)(options "")(descr ""))
+  (lib (name AD5242BRUZ1M)(type Legacy)(uri ${KIPRJMOD}/libs/AD5242BRUZ1M.lib)(options "")(descr ""))
+  (lib (name SSAJ120100)(type Legacy)(uri ${KIPRJMOD}/libs/SSAJ120100.lib)(options "")(descr ""))
 )
